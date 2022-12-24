@@ -1,0 +1,42 @@
+type: custom:button-card
+entity: fan.media_centre_fan
+triggers_update: all
+name: |
+  [[[
+    var name = states[entity.entity_id].attributes.friendly_name
+    var id = entity.entity_id.slice(4, -4)
+    var temp = states["sensor." + id + "_temperature"].state
+    var fan = states["fan." + id + "_fan"].attributes.percentage
+    var speed = (fan > '1')? fan + "%" : "Off"
+    return "🍺 " + name + ": " + temp + "℃" + " | " + speed
+  ]]]
+state:
+  - value: 'on'
+    styles:
+      icon:
+        - animation: |
+            [[[
+              var fan = "fan." + entity.entity_id.slice(4, -4) + "_fan"
+              var input = states[fan].attributes.percentage
+              var pL = 1, pH = 100
+              var sL = 6, sH = 0.6
+              var output = (input-pL) * (sH-sL)/(pH-pL)+sL
+              return 'rotating ' + output + 's linear infinite'
+            ]]]
+styles:
+  card:
+    - animation: |
+        [[[
+          var alarm = "binary_sensor." + entity.entity_id.slice(4, -4) + "_alarm"
+          return (states[alarm].state ==='on')? 'flasher_red 0.4s linear infinite' : 'none'
+        ]]]
+extra_styles: |
+  @keyframes flasher_red {
+    50% {background: radial-gradient( rgb(0,0,0,0%), rgb(255,0,128,50%) );
+    box-shadow: 0px 0px 20px rgb(255,0,0,100%);};
+tap_action:
+  action: more-info
+  entity: |
+    [[[
+      return "number." + entity.entity_id.slice(4, -4) + "_set_temp"
+    ]]]
