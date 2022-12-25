@@ -7,7 +7,7 @@ Open and copy all the code from [Button_Card.yaml](https://github.com/3ative/but
 
 [Part 2 - ESPHome Flash and Breakdown](https://youtu.be/72yCK_FiVSg)
 
-[Part 3 - Custom Dashboard Button](#) - Working on it
+[Part 3 - Custom Dashboard Button](https://youtu.be/oSUa1QDitAU)
 
 _____
 #### 💖 Found this useful, want to say '*Thanks*' and support my efforts. *CHEERS*🍺
