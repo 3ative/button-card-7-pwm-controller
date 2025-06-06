@@ -9,8 +9,9 @@ Open and copy all the code from [Button_Card.yaml](https://github.com/3ative/but
 
 [Part 3 - Custom Dashboard Button](https://youtu.be/oSUa1QDitAU)
 
-_____
-#### 💖 Found this useful, want to say '*Thanks*' and support my efforts. *CHEERS*🍺
+---
+### 🤝 Found this useful, want to say 'Thanks' and support my efforts. CHEERS🍺
 | Buy me a Coffee | PATREON |
 |-----------------|---------|
-| https://www.buymeacoffee.com/3ative | https://www.patreon.com/3ative |
+| [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-donate-yellow.svg?style=flat-square&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/3ative) | [![Patreon](https://img.shields.io/badge/Patreon-support-red.svg?style=flat-square&logo=patreon)](https://www.patreon.com/3ative) |
+---
